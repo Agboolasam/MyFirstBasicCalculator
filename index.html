@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testtest.css">
+    <title>testtest</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <table bordercolor="black">
+            <caption> BASIC CALCUTATOR</caption>
+            <tr>
+                <td back-ground-color="black" color="white" colspan="3" height="20">
+                    <input type="text" id="display" value="0" disabled>
+                </td>
+                <td> <input type="button" id="clear" value="MC" onclick="clr()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="plus" value="+" onclick="display('+')">
+                </td>
+                <td><input type="button" id="seven" value="7" onclick="display('7')">
+                </td>
+                <td>
+                    <input type="button" id="eight" value="8" onclick="display('8')"></td>
+                <td>
+                    <input type="button" id="nine" value="9" onclick="display('9')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="minus" value="-" onclick="display('-')"></td>
+                <td><input type="button" id=" four " value="4" onclick="display('4')">
+                </td>
+                <td><input type="button" id="five " value="5" onclick="display('5')"></td>
+                <td><input type="button" id="six " value="6" onclick="display('6')">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" id="multiply" value="*" onclick="display('*')">
+                </td>
+                <td>
+                    <input type="button" id="one" value="1" onclick="display('1')">
+                </td>
+                <td><input type="button" id="two" value="2" onclick="display('2')">
+                </td>
+                <td>
+                    <input type="button" id="three" value="3" onclick="display('3')">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" id="divide" value="/" onclick="display('/')">
+                </td>
+                <td>
+                    <input type="button" id="zero" value="0" onclick="display('0')">
+                </td>
+                <td>
+                    <input type="button" id="clear_all" value="AC" onclick="allclr()">
+                </td>
+                <td>
+                    <input type="button" id="equal" value="=" onclick="calc()">
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <script>
+        var disp = document.getElementById("display");
+        var kk = document.getElementById("one");
+        var kp = document.getElementById("two");
+
+        function display(value) {
+            if (disp.value != "0") {
+                disp.value += value;
+            } else {
+                disp.value = value;
+            }
+        }
+
+        function clr() {
+            if (disp.value != "0") {
+                disp.value = disp.value.toString().slice(0, -1);
+            } else {
+                location.reload();
+            }
+        }
+
+        function calc() {
+            disp.value = eval(disp.value);
+        }
+
+        function allclr() {
+            disp.value = "0";
+        }
+    </script>
+
+</body>
+
+</html>
