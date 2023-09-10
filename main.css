@@ -1,16 +1,18 @@
 body {
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate( -50%, -50%);
+    margin: 0;
+    padding: 0;
 }
 
 .calculator table {
     padding: 5px;
-    margin: auto;
     background-color: rgb(179, 52, 52);
     width: 300px;
     height: 300px;
     border-width: 5px;
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    transform: translate( -50%, -50%);
 }
 
 #display {
