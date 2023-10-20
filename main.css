@@ -1,12 +1,18 @@
 body {
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate( -50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1)2000ms;
 }
 
 .calculator table {
     padding: 5px;
-    margin: auto;
     background-color: rgb(179, 52, 52);
     width: 300px;
     height: 300px;
@@ -29,12 +35,15 @@ body {
 .calculator input[type=button] {
     margin: 0;
     padding: 0;
-    /* position: center;  */
     width: 65px;
     height: 40px;
     font-size: larger;
     font-family: cursive;
     border-radius: 5px;
+}
+
+#equal {
+    width: 100%;
 }
 
 .calculator input[type=button]:active {
@@ -43,9 +52,6 @@ body {
 }
 
 @media screen and (max-width:500px) {
-    .calculator {
-        flex-direction: column;
-    }
     .calculator table {
         width: 80vw;
         height: 40vh;
