@@ -1,4 +1,5 @@
 let disp = document.getElementById("display");
+const themeBtn = document.getElementsByTagName("nav");
 
 
 
@@ -25,3 +26,9 @@ function calc() {
 function allclr() {
     disp.value = "0";
 }
+
+themeBtn.addEventListener("click", (e) => {
+
+    e.target.style.background = " rgba(255, 255, 255, 0.6)"
+
+})
