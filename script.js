@@ -1,5 +1,10 @@
 let disp = document.getElementById("display");
+<<<<<<< HEAD
 let themeBtns = document.getElementById("theme");
+=======
+const themeBtns = document.getElementsByTagName("nav");
+
+>>>>>>> dfc426e113bccc9fd5265153d07e3dbf107ac205
 
 
 function display(value) {
@@ -27,6 +32,7 @@ function allclr() {
 }
 
 
+<<<<<<< HEAD
 let darkThm = document.getElementById("darkCheck");
 let lightThm = document.getElementById("lightCheck");
 themeBtns.addEventListener("click", (e) => {
@@ -39,3 +45,8 @@ themeBtns.addEventListener("click", (e) => {
     }
 
 })
+=======
+themeBtns.addEventListener("click", (e) => {
+    e.target.style.background = "rgba(255, 255, 255, 0.6)";
+})
+>>>>>>> dfc426e113bccc9fd5265153d07e3dbf107ac205
