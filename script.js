@@ -1,10 +1,4 @@
 let disp = document.getElementById("display");
-<<<<<<< HEAD
-let themeBtns = document.getElementById("theme");
-=======
-const themeBtns = document.getElementsByTagName("nav");
-
->>>>>>> dfc426e113bccc9fd5265153d07e3dbf107ac205
 
 
 function display(value) {
@@ -19,8 +13,9 @@ function clr() {
     if (disp.value != "0") {
         disp.value = disp.value.toString().slice(0, -1);
     } else {
-        location.reload();
+        allclr();
     }
+    console.log(disp.value.toString());
 }
 
 function calc() {
@@ -32,21 +27,29 @@ function allclr() {
 }
 
 
-<<<<<<< HEAD
-let darkThm = document.getElementById("darkCheck");
-let lightThm = document.getElementById("lightCheck");
-themeBtns.addEventListener("click", (e) => {
-    if (e.target.id === "darkCheck") {
-        e.target.style.background = "rgba(255, 255, 255, 0.6)";
-        darkThm.checked = true;
-    } else if (e.target.id === "darkCheck") {
-        e.target.style.background = "rgba(255, 255, 255, 0.6)";
-        lightThm.checked = true;
-    }
+const themeBtn = document.getElementById("theme");
+const valBtn = document.querySelectorAll("input");
+const lightMode = document.getElementById("lightmode");
+const darkMode = document.getElementById("darkmode");
 
-})
-=======
-themeBtns.addEventListener("click", (e) => {
-    e.target.style.background = "rgba(255, 255, 255, 0.6)";
-})
->>>>>>> dfc426e113bccc9fd5265153d07e3dbf107ac205
+//window.addEventListener("load", () => {
+//  document.getElementById("light").style.background = "rgba(255,255,255,0.6)";
+//});
+console.log(valBtn);
+themeBtn.addEventListener("click", (e) => {
+    if (e.target.id === "dark") {
+        e.target.style.background = "rgba(255, 255, 255, 0.6)";
+        e.target.previousElementSibling.style.background = "rgba(255, 255, 255, 0.1)";
+        lightMode.style.display = "none";
+        darkMode.style.display = "block";
+        alert("dark mode will be actived");
+    } else {
+
+        e.target.style.background = "rgba(255, 255, 255, 0.6)";
+        e.target.nextElementSibling.style.background = "rgba(255, 255, 255, 0.1)";
+        lightMode.style.display = "block";
+        darkMode.style.display = "none";
+
+        alert("light mode  will be actived");
+    }
+}, false)
