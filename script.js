@@ -1,4 +1,5 @@
 let disp = document.getElementById("display");
+let disp1 = document.getElementById("display-dark");
 
 
 function display(value) {

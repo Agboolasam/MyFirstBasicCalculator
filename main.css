@@ -21,7 +21,8 @@ body {
     border-width: 5px;
 }
 
-#display {
+#display,
+#display-dark {
     width: 280px;
     box-sizing: border-box;
     height: 45px;
@@ -71,7 +72,9 @@ body {
         margin: 5px;
     }
     #equal,
-    #display {
+    #display,
+    #equal-dark,
+    #display-dark {
         width: 100%;
         height: 100%;
     }
@@ -103,5 +106,15 @@ body {
     }
     #theme span:hover {
         background: rgba(255, 255, 255, 0.6);
+    }
+    #darkMode {
+        color: white;
+    }
+    #darkMode table {
+        background-color: rgba(4, 11, 39);
+        border-color: black;
+    }
+    #darkMode input[type=button] {
+        background: rgba(0, 0, 0, 0.6)
     }
 }
