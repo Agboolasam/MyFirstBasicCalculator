@@ -1,5 +1,5 @@
 let disp = document.getElementById("display");
-
+let themeBtns = document.getElementById("theme");
 
 
 function display(value) {
@@ -25,3 +25,17 @@ function calc() {
 function allclr() {
     disp.value = "0";
 }
+
+
+let darkThm = document.getElementById("darkCheck");
+let lightThm = document.getElementById("lightCheck");
+themeBtns.addEventListener("click", (e) => {
+    if (e.target.id === "darkCheck") {
+        e.target.style.background = "rgba(255, 255, 255, 0.6)";
+        darkThm.checked = true;
+    } else if (e.target.id === "darkCheck") {
+        e.target.style.background = "rgba(255, 255, 255, 0.6)";
+        lightThm.checked = true;
+    }
+
+})
