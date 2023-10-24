@@ -44,6 +44,7 @@ body {
     font-size: larger;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 5px;
+    color: black;
     transition: ease-in 500ms;
 }
 
