@@ -19,7 +19,7 @@
             <span class="fa-regular fa-moon " id="dark">dark</span>
         </nav>
         <div id="lightMode">
-            <table bordercolor="black">
+            <table bordercolor="black" id="calc-base">
                 <caption> BASIC CALCUTATOR</caption>
                 <tr>
                     <td back-ground-color="black" color="white" colspan="3" height="20">
@@ -80,73 +80,10 @@
                 </tr>
             </table>
         </div>
-        <div id="darkMode" hidden>
-            <table bordercolor="black">
-                <caption> BASIC CALCUTATOR</caption>
-                <tr>
-                    <td back-ground-color="black" color="white" colspan="3" height="20">
-                        <input type="text" id="display-dark" value="0" disabled>
-                    </td>
-                    <td> <input type="button" id="clear-dark" value="MC" onclick="clr()"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="button" id="plus-dark" value="+" onclick="display('+')">
-                    </td>
-                    <td><input type="button" id="seven-dark" value="7" onclick="display('7')">
-                    </td>
-                    <td>
-                        <input type="button" id="eigh-darkt" value="8" onclick="display('8')"></td>
-                    <td>
-                        <input type="button" id="nine-dark" value="9" onclick="display('9')">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="button" id="minus-dark" value="-" onclick="display('-')"></td>
-                    <td><input type="button" id="four-dark" value="4" onclick="display('4')">
-                    </td>
-                    <td><input type="button" id="five-dark" value="5" onclick="display('5')"></td>
-                    <td><input type="button" id="six-dark" value="6" onclick="display('6')">
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="button" id="multiply-dark" value="*" onclick="display('*')">
-                    </td>
-                    <td>
-                        <input type="button" id="one-dark" value="1" onclick="display('1')">
-                    </td>
-                    <td><input type="button" id="two-dark" value="2" onclick="display('2')">
-                    </td>
-                    <td>
-                        <input type="button" id="three-dark" value="3" onclick="display('3')">
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="button" id="divide-dark" value="/" onclick="display('/')">
-                    </td>
-                    <td>
-                        <input type="button" id="zero-dark" value="0" onclick="display('0')">
-                    </td>
-                    <td>
-                        <input type="button" id="clear_all-dark" value="AC" onclick="allclr()">
-                    </td>
-                    <td>
-                        <input type="button" id="dot-dark" value="." onclick="display('.')">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4" width="200px">
-                        <input type="button" id="equal-dark" value="=" onclick="calc()">
-                    </td>
-                </tr>
-            </table>
-        </div>
 
-    </div>
 
-    <script src="/script.js">
-    </script>
+        <script src="/script.js">
+        </script>
 
 </body>
 

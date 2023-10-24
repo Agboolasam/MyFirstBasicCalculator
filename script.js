@@ -29,7 +29,7 @@ function allclr() {
 
 
 const themeBtn = document.getElementById("theme");
-const valBtn = document.querySelectorAll("input");
+const valBtn = document.querySelectorAll("input[type=button]");
 const lightMode = document.getElementById("lightmode");
 const darkMode = document.getElementById("darkmode");
 
@@ -39,18 +39,27 @@ window.addEventListener("load", () => {
 console.log(valBtn);
 themeBtn.addEventListener("click", (e) => {
     if (e.target.id === "dark") {
-        e.target.style.background = "rgba(255, 255, 255, 0.6)";
+        e.target.style.background = "rgba(255, 255, 255,0.4 )";
         e.target.previousElementSibling.style.background = "rgba(255, 255, 255, 0.1)";
-        // lightMode.style.display = "none";
-        //darkMode.style.display = "block";
-        alert("dark mode will be actived");
+        e.target.parentElement.style.background = "rgba(0,0,0,0.6)";
+        document.getElementById("calc-base").style.backgroundColor = "rgb(1, 8, 32)";
+        document.getElementById("calc-base").style.borderColor = "rgb(0, 0, 0)";
+        document.querySelector(".calculator").style.background = "rgb(4, 8, 32, 0.9)";
+        valBtn.forEach(element => {
+            element.style.background = "rgb(0,0,0)";
+            element.style.color = "rgb(255,255,255)";
+        });
     } else {
 
         e.target.style.background = "rgba(255, 255, 255, 0.6)";
-        e.target.nextElementSibling.style.background = "rgba(255, 255, 255, 0.1)";
-        //lightMode.style.display = "block";
-        //darkMode.style.display = "none";
-
-        alert("light mode  will be actived");
+        e.target.nextElementSibling.style.background = "rgba(255, 255, 255, 0.2)";
+        e.target.parentElement.style.background = "rgba(255,255,255,0.4)";
+        document.getElementById("calc-base").style.backgroundColor = "rgb(179, 52, 52)";
+        document.querySelector(".calculator").style.background = "rgb(179, 52, 52)";
+        document.getElementById("calc-base").style.borderColor = "rgb(255, 255, 255)";
+        valBtn.forEach(element => {
+            element.style.background = "rgb(255,255,255)";
+            element.style.color = "rgb(0,0,0)";
+        });
     }
 }, false)
