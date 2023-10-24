@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgb(179, 52, 52);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1)2000ms;
 }
 
@@ -19,6 +20,7 @@ body {
     width: 300px;
     height: 300px;
     border-width: 5px;
+    border-color: rgba(255, 255, 255, 0.6);
     transition: ease-in 500ms;
 }
 
@@ -45,6 +47,12 @@ body {
     transition: ease-in 500ms;
 }
 
+.calculator caption {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    margin: 5px;
+}
+
 #equal {
     width: 100%;
 }
@@ -55,7 +63,33 @@ body {
 }
 
 #theme {
-    display: none;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5%;
+    width: 25vw;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: ease-in-out 500ms;
+}
+
+#theme span {
+    border-radius: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 90%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    transition: ease-in-out 500ms;
+}
+
+#darkMode input[type=button] {
+    background: rgba(0, 0, 0, 0.6)
 }
 
 @media screen and (max-width:500px) {
@@ -81,7 +115,6 @@ body {
     }
     .calculator {
         background: rgb(179, 52, 52);
-        position: relative;
     }
     #theme {
         box-sizing: border-box;
